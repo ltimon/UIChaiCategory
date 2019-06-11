@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9D0847F922A68E50009F4B65 /* TTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0847F822A68E50009F4B65 /* TTLabel.m */; };
 		9D08480222A9059A009F4B65 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D08480122A9059A009F4B65 /* SecondViewController.m */; };
-		9D08480522A90D21009F4B65 /* UILabel+Chain.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D08480422A90D21009F4B65 /* UILabel+Chain.m */; };
 		9DD9A25122A663FA00741911 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9A25022A663FA00741911 /* AppDelegate.m */; };
 		9DD9A25422A663FA00741911 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9A25322A663FA00741911 /* ViewController.m */; };
 		9DD9A25722A663FA00741911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DD9A25522A663FA00741911 /* Main.storyboard */; };
@@ -18,6 +17,7 @@
 		9DD9A25F22A663FB00741911 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9A25E22A663FB00741911 /* main.m */; };
 		9DD9A26922A663FB00741911 /* UICategoryTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9A26822A663FB00741911 /* UICategoryTestTests.m */; };
 		9DD9A27422A663FB00741911 /* UICategoryTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9A27322A663FB00741911 /* UICategoryTestUITests.m */; };
+		9DF0C70422AF9F310061EAF3 /* UILabel+Chain.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0C70322AF9F310061EAF3 /* UILabel+Chain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +42,6 @@
 		9D0847F822A68E50009F4B65 /* TTLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTLabel.m; sourceTree = "<group>"; };
 		9D08480022A9059A009F4B65 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		9D08480122A9059A009F4B65 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		9D08480322A90D21009F4B65 /* UILabel+Chain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Chain.h"; sourceTree = "<group>"; };
-		9D08480422A90D21009F4B65 /* UILabel+Chain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Chain.m"; sourceTree = "<group>"; };
 		9DD9A24C22A663FA00741911 /* UICategoryTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICategoryTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD9A24F22A663FA00741911 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9DD9A25022A663FA00741911 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,6 +58,8 @@
 		9DD9A26F22A663FB00741911 /* UICategoryTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UICategoryTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD9A27322A663FB00741911 /* UICategoryTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICategoryTestUITests.m; sourceTree = "<group>"; };
 		9DD9A27522A663FB00741911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DF0C70222AF9F310061EAF3 /* UILabel+Chain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Chain.h"; sourceTree = "<group>"; };
+		9DF0C70322AF9F310061EAF3 /* UILabel+Chain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Chain.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +110,7 @@
 		9DD9A24E22A663FA00741911 /* UICategoryTest */ = {
 			isa = PBXGroup;
 			children = (
+				9DF0C70122AF9F0A0061EAF3 /* Category */,
 				9DD9A24F22A663FA00741911 /* AppDelegate.h */,
 				9DD9A25022A663FA00741911 /* AppDelegate.m */,
 				9DD9A25222A663FA00741911 /* ViewController.h */,
@@ -123,8 +124,6 @@
 				9DD9A25E22A663FB00741911 /* main.m */,
 				9D0847F722A68E50009F4B65 /* TTLabel.h */,
 				9D0847F822A68E50009F4B65 /* TTLabel.m */,
-				9D08480322A90D21009F4B65 /* UILabel+Chain.h */,
-				9D08480422A90D21009F4B65 /* UILabel+Chain.m */,
 			);
 			path = UICategoryTest;
 			sourceTree = "<group>";
@@ -145,6 +144,15 @@
 				9DD9A27522A663FB00741911 /* Info.plist */,
 			);
 			path = UICategoryTestUITests;
+			sourceTree = "<group>";
+		};
+		9DF0C70122AF9F0A0061EAF3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0C70222AF9F310061EAF3 /* UILabel+Chain.h */,
+				9DF0C70322AF9F310061EAF3 /* UILabel+Chain.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D08480522A90D21009F4B65 /* UILabel+Chain.m in Sources */,
+				9DF0C70422AF9F310061EAF3 /* UILabel+Chain.m in Sources */,
 				9D08480222A9059A009F4B65 /* SecondViewController.m in Sources */,
 				9D0847F922A68E50009F4B65 /* TTLabel.m in Sources */,
 				9DD9A25422A663FA00741911 /* ViewController.m in Sources */,
