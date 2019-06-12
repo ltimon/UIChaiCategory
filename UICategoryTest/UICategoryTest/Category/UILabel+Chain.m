@@ -11,98 +11,106 @@
 
 @implementation UILabel (Chain)
 
-- (ChainBackgroundColor)backgroundColor_chain {
+- (ChainLabelBackgroundColor)backgroundColor_chain {
     return ^(UIColor *backgroundColor){
         self.backgroundColor = backgroundColor;
         return self;
     };
 }
 
-- (ChainFrame)frame_chain {
-    ChainFrame frameBlock = ChainFrame(frame) {
+- (ChainLabelFrame)frame_chain {
+    ChainLabelFrame frameBlock = ChainLabelFrame(frame) {
         self.frame = frame;
         return self;
     };
     return frameBlock;
 }
 
-- (ChainSuperView)superView_chain {
-    ChainSuperView superViewBlock = ChainSuperView(superView) {
+- (ChainLabelSuperView)superView_chain {
+    ChainLabelSuperView superViewBlock = ChainLabelSuperView(superView) {
         [superView addSubview:self];
         return self;
     };
     return superViewBlock;
 }
 
-- (ChainText)text_chain {
+- (ChainLabelText)text_chain {
     return ^(NSString *text){
         self.text = text;
         return self;
     };
 }
 
-- (ChainTextColor)textColor_chain {
-    ChainTextColor textColorBlock = ChainTextColor(textColor){
+- (ChainLabelTextColor)textColor_chain {
+    ChainLabelTextColor textColorBlock = ChainLabelTextColor(textColor){
         self.textColor = textColor;
         return self;
     };
     return textColorBlock;
 }
 
-- (ChainFont)font_chain {
-    ChainFont fontBlock = ChainFont(font){
+- (ChainLabelFont)font_chain {
+    ChainLabelFont fontBlock = ChainLabelFont(font){
         self.font = font;
         return self;
     };
     return fontBlock;
 }
 
-- (ChainTextAlignment)textAlignment_chain {
-    ChainTextAlignment textAlignmentBlock = ChainTextAlignment(textAlignment) {
+- (ChainLabelTextAlignment)textAlignment_chain {
+    ChainLabelTextAlignment textAlignmentBlock = ChainLabelTextAlignment(textAlignment) {
         self.textAlignment = textAlignment;
         return self;
     };
     return textAlignmentBlock;
 }
 
-- (ChainCornerRadius)cornerRadius_chain {
-    ChainCornerRadius cornerRadiusBlock = ChainCornerRadius(cornerRadius) {
+- (ChainLabelCornerRadius)cornerRadius_chain {
+    ChainLabelCornerRadius cornerRadiusBlock = ChainLabelCornerRadius(cornerRadius) {
         self.layer.cornerRadius = cornerRadius;
         return self;
     };
     return cornerRadiusBlock;
 }
 
-- (ChainMasksToBounds)masksToBounds_chain {
-    ChainMasksToBounds masksToBoundsBlock = ChainMasksToBounds(masksToBounds) {
+- (ChainLabelMasksToBounds)masksToBounds_chain {
+    ChainLabelMasksToBounds masksToBoundsBlock = ChainLabelMasksToBounds(masksToBounds) {
         self.layer.masksToBounds = masksToBounds;
         return self;
     };
     return masksToBoundsBlock;
 }
 
-- (ChainHidden)hidden_chain {
-    ChainHidden hiddenBlock = ChainHidden(hidden){
+- (ChainLabelHidden)hidden_chain {
+    ChainLabelHidden hiddenBlock = ChainLabelHidden(hidden){
         self.hidden = hidden;
         return self;
     };
     return hiddenBlock;
 }
 
-- (ChainBorderWidth)borderWidth_chain {
-    ChainBorderWidth borderWidthBlock = ChainBorderWidth(borderWidth){
+- (ChainLabelBorderWidth)borderWidth_chain {
+    ChainLabelBorderWidth borderWidthBlock = ChainLabelBorderWidth(borderWidth){
         self.layer.borderWidth = borderWidth;
         return self;
     };
     return borderWidthBlock;
 }
 
-- (ChainBorderColor)borderColor_chain {
-    ChainBorderColor borderColorBlock = ChainBorderColor(color){
+- (ChainLabelBorderColor)borderColor_chain {
+    ChainLabelBorderColor borderColorBlock = ChainLabelBorderColor(color){
         self.layer.borderColor = color.CGColor;
         return self;
     };
     return borderColorBlock;
+}
+
+- (ChainLabelAttributeText)attributedText_chain {
+    ChainLabelAttributeText attributedTextBlock = ChainLabelAttributeText(attributedText) {
+        self.attributedText = attributedText;
+        return self;
+    };
+    return attributedTextBlock;
 }
 
 @end

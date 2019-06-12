@@ -8,8 +8,8 @@
 
 #import "ViewController.h"
 #import "SecondViewController.h"
-#import "TTLabel.h"
 #import "UILabel+Chain.h"
+#import "UIButton+Chain.h"
 
 @interface ViewController ()
 
@@ -26,9 +26,10 @@
     [button addTarget:self action:@selector(jump) forControlEvents:1<<6];
     button.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:button];
+    button.title_state_chain(@"哈哈", UIControlStateNormal).backgroundColor_chain([UIColor cyanColor]);
     
     UILabel *nlabel = [[UILabel alloc] init];
-    nlabel.text_chain(@"category").backgroundColor_chain([UIColor orangeColor]).font_chain([UIFont systemFontOfSize:20]).textAlignment_chain(NSTextAlignmentCenter).superView_chain(self.view).frame_chain(CGRectMake(100, 160, 200, 50)).cornerRadius_chain(5.0f).masksToBounds_chain(YES).borderColor_chain([UIColor redColor]).borderWidth_chain(1.0);
+    nlabel.text_chain(@"category").backgroundColor_chain([UIColor whiteColor]).font_chain([UIFont systemFontOfSize:20]).textAlignment_chain(NSTextAlignmentCenter).superView_chain(self.view).frame_chain(CGRectMake(100, 160, 200, 50)).cornerRadius_chain(5.0f).masksToBounds_chain(YES).borderColor_chain([UIColor redColor]).borderWidth_chain(2.0).attributedText_chain([[NSAttributedString alloc] initWithString:@"123"]);
 }
 
 - (void)jump {

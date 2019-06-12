@@ -8,67 +8,72 @@
 
 #import <UIKit/UIKit.h>
 
-typedef UILabel * (^ChainBackgroundColor)(UIColor *backgroundColor);
-#define ChainBackgroundColor(color) ^UILabel * (UIColor *backgroundColor)
+typedef UILabel * (^ChainLabelBackgroundColor)(UIColor *backgroundColor);
+#define ChainLabelBackgroundColor(color) ^UILabel * (UIColor *backgroundColor)
 
-typedef UILabel * (^ChainText)(NSString *text);
-#define ChainText(text) ^UILabel * (NSString *text)
+typedef UILabel * (^ChainLabelText)(NSString *text);
+#define ChainLabelText(text) ^UILabel * (NSString *text)
 
-typedef UILabel * (^ChainTextColor) (UIColor *textColor);
-#define ChainTextColor(textColor) ^UILabel * (UIColor *textColor)
+typedef UILabel * (^ChainLabelTextColor) (UIColor *textColor);
+#define ChainLabelTextColor(textColor) ^UILabel * (UIColor *textColor)
 
-typedef UILabel * (^ChainFont) (UIFont *font);
-#define ChainFont(font) ^UILabel * (UIFont *font)
+typedef UILabel * (^ChainLabelFont) (UIFont *font);
+#define ChainLabelFont(font) ^UILabel * (UIFont *font)
 
-typedef UILabel * (^ChainFrame)(CGRect frame);
-#define ChainFrame(frame) ^UILabel * (CGRect frame)
+typedef UILabel * (^ChainLabelFrame)(CGRect frame);
+#define ChainLabelFrame(frame) ^UILabel * (CGRect frame)
 
-typedef UILabel * (^ChainSuperView)(UIView *superView);
-#define ChainSuperView(superView) ^UILabel * (UIView *superView)
+typedef UILabel * (^ChainLabelSuperView)(UIView *superView);
+#define ChainLabelSuperView(superView) ^UILabel * (UIView *superView)
 
-typedef UILabel * (^ChainTextAlignment)(NSTextAlignment textAlignment);
-#define ChainTextAlignment(textAlignment) ^UILabel * (NSTextAlignment textAlignment)
+typedef UILabel * (^ChainLabelTextAlignment)(NSTextAlignment textAlignment);
+#define ChainLabelTextAlignment(textAlignment) ^UILabel * (NSTextAlignment textAlignment)
 
-typedef UILabel * (^ChainCornerRadius)(CGFloat cornerRadius);
-#define ChainCornerRadius(cornerRadius) ^UILabel * (CGFloat cornerRadius)
+typedef UILabel * (^ChainLabelCornerRadius)(CGFloat cornerRadius);
+#define ChainLabelCornerRadius(cornerRadius) ^UILabel * (CGFloat cornerRadius)
 
-typedef UILabel * (^ChainMasksToBounds)(BOOL masksToBounds);
-#define ChainMasksToBounds(masksToBounds) ^UILabel * (BOOL masksToBounds)
+typedef UILabel * (^ChainLabelMasksToBounds)(BOOL masksToBounds);
+#define ChainLabelMasksToBounds(masksToBounds) ^UILabel * (BOOL masksToBounds)
 
-typedef UILabel * (^ChainHidden)(BOOL hidden);
-#define ChainHidden(hidden) ^UILabel * (BOOL hidden)
+typedef UILabel * (^ChainLabelHidden)(BOOL hidden);
+#define ChainLabelHidden(hidden) ^UILabel * (BOOL hidden)
 
-typedef UILabel * (^ChainBorderColor)(UIColor *color);
-#define ChainBorderColor(color) ^UILabel * (UIColor *color)
+typedef UILabel * (^ChainLabelBorderColor)(UIColor *color);
+#define ChainLabelBorderColor(color) ^UILabel * (UIColor *color)
 
-typedef UILabel * (^ChainBorderWidth)(CGFloat borderWidth);
-#define ChainBorderWidth(borderWidth) ^UILabel * (CGFloat borderWidth)
+typedef UILabel * (^ChainLabelBorderWidth)(CGFloat borderWidth);
+#define ChainLabelBorderWidth(borderWidth) ^UILabel * (CGFloat borderWidth)
+
+typedef UILabel * (^ChainLabelAttributeText)(NSAttributedString *attributedText);
+#define ChainLabelAttributeText(attributedText) ^UILabel * (NSAttributedString *attributedText)
 
 @interface UILabel (Chain)
 
-@property (nonatomic, readonly, copy) ChainBackgroundColor backgroundColor_chain;
+@property (nonatomic, readonly, copy) ChainLabelBackgroundColor backgroundColor_chain;
 
-@property (nonatomic, readonly, copy) ChainFrame frame_chain;
+@property (nonatomic, readonly, copy) ChainLabelFrame frame_chain;
 
-@property (nonatomic, readonly, copy) ChainText text_chain;
+@property (nonatomic, readonly, copy) ChainLabelText text_chain;
 
-@property (nonatomic, readonly, copy) ChainTextColor textColor_chain;
+@property (nonatomic, readonly, copy) ChainLabelTextColor textColor_chain;
 
-@property (nonatomic, readonly, copy) ChainSuperView superView_chain;
+@property (nonatomic, readonly, copy) ChainLabelSuperView superView_chain;
 
-@property (nonatomic, readonly, copy) ChainTextAlignment textAlignment_chain;
+@property (nonatomic, readonly, copy) ChainLabelTextAlignment textAlignment_chain;
 
-@property (nonatomic, readonly, copy) ChainFont font_chain;
+@property (nonatomic, readonly, copy) ChainLabelFont font_chain;
 
-@property (nonatomic, readonly, copy) ChainCornerRadius cornerRadius_chain;
+@property (nonatomic, readonly, copy) ChainLabelCornerRadius cornerRadius_chain;
 
-@property (nonatomic, readonly, copy) ChainMasksToBounds masksToBounds_chain;
+@property (nonatomic, readonly, copy) ChainLabelMasksToBounds masksToBounds_chain;
 
-@property (nonatomic, readonly, copy) ChainHidden hidden_chain;
+@property (nonatomic, readonly, copy) ChainLabelHidden hidden_chain;
 
-@property (nonatomic, readonly, copy) ChainBorderColor borderColor_chain;
+@property (nonatomic, readonly, copy) ChainLabelBorderColor borderColor_chain;
 
-@property (nonatomic, readonly, copy) ChainBorderWidth borderWidth_chain;
+@property (nonatomic, readonly, copy) ChainLabelBorderWidth borderWidth_chain;
+
+@property (nonatomic, readonly, copy) ChainLabelAttributeText attributedText_chain;
 
 @end
 

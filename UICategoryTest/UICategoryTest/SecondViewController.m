@@ -7,7 +7,6 @@
 //
 
 #import "SecondViewController.h"
-#import "TTLabel.h"
 
 @interface SecondViewController ()
 
@@ -22,8 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    TTLabel *label = [[TTLabel alloc] init];
-    label.frame(CGRectMake(100, 100, 100, 30)).text(@"hello world").textColor([UIColor orangeColor]).superView(self.view);
 }
 
 /*
